@@ -113,5 +113,11 @@ url: https://github.com/mswjs/msw-storybook-addon
   }
 ```
 
+--- Rodar o build localmente antes de subir para o git para criar Branche 'gh-pages'
+
+> $ npm run deploy-storybook
+
+--------------------------------- END ------------------------------------------
+
 - TEMA DO VSCode
   -- Min Theme
