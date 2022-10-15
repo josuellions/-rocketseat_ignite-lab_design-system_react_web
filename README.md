@@ -95,10 +95,13 @@ url: https://github.com/mswjs/msw-storybook-addon
 
 ### Deploy continuo CI/CD
 
-- Criar arquivo configuração
-  -- /.git/workflows/deploy-docs.yml
-- Configurar quando publicado no GIT em dominio proprio não é necessario
-  -- /.storybook/main.js
+- Instalar
+  > $npm i @storybook/storybook-deployer
+
+-- Criar arquivo configuração
+-- /.git/workflows/deploy-docs.yml
+-- Configurar quando publicado no GIT em dominio proprio não é necessario
+-- /.storybook/main.js
 
 ```
  viteFinal: (config, { configType }) => {
