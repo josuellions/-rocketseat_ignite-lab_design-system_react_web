@@ -101,7 +101,13 @@ url: https://github.com/mswjs/msw-storybook-addon
   -- /.storybook/main.js
 
 ```
+ viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/ignite-lab-design-system/'
+    }
 
+    return config
+  }
 ```
 
 - TEMA DO VSCode
