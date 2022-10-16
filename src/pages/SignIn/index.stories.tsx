@@ -15,7 +15,7 @@ export default {
   parameters: { //para utilização com Mock/storybook
     msw: {
       handlers: [
-        rest.post('/sessions', (req, res, ctx) => {
+        rest.post('https://josuellions.github.io/sessions', (req, res, ctx) => {
           return res(ctx.json({
             message: 'Login realizado!'
           }))
