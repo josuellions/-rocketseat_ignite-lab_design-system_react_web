@@ -97,6 +97,7 @@ url: https://github.com/mswjs/msw-storybook-addon
 
 - Instalar
   > $npm i @storybook/storybook-deployer
+  > $npm run deploy-storybook -- -o storybook-static
 
 -- Criar arquivo configuração
 -- /.git/workflows/deploy-docs.yml
