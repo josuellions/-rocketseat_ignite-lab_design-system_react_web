@@ -22,7 +22,7 @@ module.exports = {
   ],
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
-      config.base = '/ignite-lab-design-system/'
+      config.base = '/rocketseat_ignite-lab_design-system_react_web/'
     }
 
     return config
