@@ -25,10 +25,10 @@ export default {
   }
 } as Meta
 
-export const Default: StoryObj<any> = { 
+export const Default: StoryObj = { 
 
   play: async ( { canvasElement } ) => {
-    const canvas: any = within(canvasElement)
+    const canvas = within(canvasElement)
 
     //Pega os elementos do component HTML/REACT
     userEvent.type(canvas.getByPlaceholderText('Digite seu email'), 'josuel@email.com');
@@ -42,5 +42,4 @@ export const Default: StoryObj<any> = {
       timeout: 620
     })
   }
-
 }
