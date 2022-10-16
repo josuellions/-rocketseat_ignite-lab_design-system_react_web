@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages -- -o storybook-static",
+    "deploy-storybook": "storybook-to-ghpages",
     "test-storybook": "test-storybook"
   },
   "dependencies": {
