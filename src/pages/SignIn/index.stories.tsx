@@ -15,7 +15,7 @@ export default {
   parameters: { //para utilização com Mock/storybook
     msw: {
       handlers: [
-        rest.post('https://josuellions.github.io/rocketseat_ignite-lab_design-system_react_web/sessions', (req, res, ctx) => {
+        rest.post('/sessions', (req, res, ctx) => {
           return res(ctx.json({
             message: 'Login realizado!'
           }))
@@ -38,7 +38,7 @@ export const Default: StoryObj = {
 
     await waitFor(() => {
       return expect(canvas.getByText('Login Realizado...')).toBeInTheDocument()
-    } 
+    }
     /*,{ //opcional timeout
       timeout: 620
     })*/

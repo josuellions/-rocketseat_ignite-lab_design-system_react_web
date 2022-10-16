@@ -15,10 +15,10 @@ export function SignIn() {
   async function handleSignIn(event: FormEvent) {
     event.preventDefault()
 
-    await axios.post('https://josuellions.github.io/rocketseat_ignite-lab_design-system_react_web/sessions', {
+    /*await axios.post('/sessions', {
       email: 'josuel@email.com',
       password: 'testsenha123'
-    })
+    })*/
 
     setIsUserSignedIn(true)
   }
