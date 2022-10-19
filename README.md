@@ -1,17 +1,25 @@
 # Rocketseat - Evento - Ignite LAB - 03
 
-## Educador: Diego Fernandes
+#### Educador: Diego Fernandes
 
-## Data: 10/10/2022 a 13/10/2022
+#### Data: 10/10/2022 a 13/10/2022
 
 - Construindo aplicação desde o Design no Figma
   -- https://www.figma.com/file/Q3kdRbjkueusFc3KG8yXoQ/Ignite-Lab---Design-System?node-id=0%3A1
 - Criando projeto React com VITE
 - Utilizando os Desing System trazidos do figma para desenvolvimento no code React
 
+## View SignIn - Login
+![image](https://user-images.githubusercontent.com/28610102/196674646-faab2aa4-2cc1-458f-ad55-31484d7895ff.png)
+
+### Criando projeto 
+
 > $npm create vite@latest
+
 > $npm i
+
 > $npm run dev
+
 > $npm install -D tailwindcss postcss autoprefixer
 
 - Arquivo de configuração tailwindcss
@@ -22,17 +30,39 @@
   -- permite testar o componente sem necessidade de acessar diretamente a tela
 
   > $npx sb init --builder @storybook/builder-vite --use-npm
+  
   > $ npm run storybook
 
   -- Configurar para theme dark
+  
   --- /.storybook/manager.js
+  ```
+    addons.setConfig({
+      theme: themes.dark,
+    })
+  ```
+  
   --- /.storybook/preview.js
+    ```
+           date: /Date$/,
+      },
+    },
+    docs: {
+      theme: themes.dark,
+    },
+  ```
 
   -- Configurar diretorios
+  
   --- /.storybook/main.js
+    
+    --- Seguir documentação do storybook
+
 
 - Importando TOKEN de Desing System do Figma
-  -- Configurar
+ 
+ -- Configurar
+ 
   --- tailwind.config.cjs
 
   -- Condicional para Tailwindcss
@@ -56,11 +86,15 @@
 
   > $npm i -D @storybook/addon-interactions @storybook/jest @storybook/testing-library @storybook/test-runner -D
 
+  
   -- TESTES NO TERMIMAL com Storybook / JEST
+  
   -- Add no package.json script => "test-storybook": "test-storybook"
 
   > $npm run test-storybook 
+  
   ou
+  
   >$npm run test-storybook -- --watch ou --watchAll
 
 -- Install AXIOS acesso API
@@ -68,18 +102,26 @@
 > $ npm i axios
 
 -- Mock Service : Mocar ou simular acesso a um serviço ou API (Frontend)
+
 --- Criar uma API local no proprio navegador
+
 url: https://mswjs.io/ (mock service worker) msw
+
 url: https://storybook.js.org/
+
 url: https://github.com/mswjs/msw-storybook-addon
 
 > $npm i msw msw-storybook-addon -D
+
 > $px msw init public/
 
 - Add no /.storybook/main.cjs
+
+```
   "staticDirs": [
   "../public"
   ],
+```
 
   - Add no /.storybook/preview.cjs
 
@@ -97,14 +139,21 @@ url: https://github.com/mswjs/msw-storybook-addon
 
 - Instalar
   > $npm i @storybook/storybook-deployer
+  
   > $npm run deploy-storybook -- -o storybook-static
 
 -- Criar arquivo configuração
+
 -- /.git/workflows/deploy-docs.yml
+
 -- Configurar quando publicado no GIT em dominio proprio não é necessario
+
 -- /.storybook/main.js
 
 ```
+"staticDirs": [
+    "../public"
+  ],
  viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/ignite-lab-design-system/'
